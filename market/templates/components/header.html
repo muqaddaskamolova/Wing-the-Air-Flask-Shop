@@ -1,0 +1,36 @@
+ <div id="header">
+      <h1 id="logo"><a href="{{ url_for('home_page') }}">Flask Market</a></h1>
+      <div id="navigation">
+        <ul>
+          <li><a href="{{ url_for('home_page') }}">Home</a></li>
+          <li><a href="{{ url_for('my_page') }}">My Account</a></li>
+          <li><a href="{{ url_for('market_page') }}">The Store(market)</a></li>
+
+            {% if current_user.is_authenticated %}
+            <li><a class="nav-link fw-bold" style="color:#7cfc00;"><i class="fas fa-coins"></i>{{ current_user.prettier_budget }}</a></li>
+         <li><a class="nav-link">WELCOME, {{ current_user.username }}</a></li>
+          <li><a href="{{ url_for('logout' )}}">Logout</a></li>
+          {% else %}
+
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="{{ url_for('register_page' )}}">Register</a></li>
+{% endif %}
+
+        </ul>
+      </div>
+    </div>
+
+  <!-- Slider -->
+    <div id="slider">
+      <div id="slider-holder">
+        <ul>
+          <li><a href="#"><img src="{{ url_for('static', filename='css/images/slide1.jpg')}}" alt="" /></a></li>
+          <li><a href="#"><img src="{{ url_for('static', filename='css/images/slide2.jpg' )}}" alt="" /></a></li>
+          <li><a href="#"><img src="{{ url_for('static', filename='css/images/slide1.jpg' )}}" alt="" /></a></li>
+          <li><a href="#"><img src="{{ url_for('static', filename='css/images/slide2.jpg' )}}" alt="" /></a></li>
+          <li><a href="#"><img src="{{ url_for('static', filename='css/images/slide1.jpg' )}}" alt="" /></a></li>
+          <li><a href="#"><img src="{{ url_for('static', filename='css/images/slide2.jpg' )}}" alt="" /></a></li>
+        </ul>
+      </div>
+      <div id="slider-nav"> <a href="#" class="prev">Previous</a> <a href="#" class="next">Next</a> </div>
+    </div>

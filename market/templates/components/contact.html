@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+Wing the Air
+{% endblock title %}
+
+{% block content %}
+<section class="vh-100 text-center bg-image" style="background-image: url('https://cdn.wallpapersafari.com/14/9/rCbGHa.jpg'); background-size:cover;" >
+ <div class="mask d-flex align-items-center h-100 gradient-custom-3 ">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+  <form style="opacity:0.7;">
+    <h2 class="text-primary">Contact us</h2>
+  <!-- Name input -->
+  <div class="form-outline mb-4">
+    <input type="text" id="form4Example1" class="form-control text-primary" placeholder="Name"/>
+
+  </div>
+
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="form4Example2" class="form-control text-primary" placeholder="Email address"/>
+
+  </div>
+
+  <!-- Message input -->
+  <div class="form-outline mb-4">
+    <textarea class="form-control text-primary" id="form4Example3" rows="4" placeholder="Message"></textarea>
+
+  </div>
+
+  <!-- Checkbox -->
+  <div class="form-check d-flex justify-content-center mb-4">
+    <input class="form-check-input me-2 p-2" type="checkbox" value="" id="form4Example4" checked />
+    <label class="form-check-label fw-bold text-light" for="form4Example4">
+      Send me a copy of this message
+    </label>
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4 fw-bold" >Send Message</button>
+
+</form>
+    </div>
+      </div>
+    </div>
+ </div>
+</section>
+{% endblock content %}

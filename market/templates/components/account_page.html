@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}
+Wing the Air
+{% endblock title %}
+
+{% block content %}
+
+
+<section class="vh-100 text-center d-flex align-items-end justify-content-center bg-image pt-5 pb-5 text-primary" style="background-image: url('https://cdn.avopix.com/photos/detail/d_94116_footwear-shoe-fink.jpeg '); background-size:cover;">
+
+
+
+   <div class="container  pt-3  d-flex justify-content-space-between" style="opacity:0.6; border-radius:20px;">
+
+        <div class="row">
+            <div class="col-lg-7 align-items-center justify-content-left d-flex mb-5 mb-lg-0">
+                <div class="blockabout" >
+                    <div class="blockabout-inner text-center bg-light text-sm-start  p-3"style="border-radius:10px;" >
+                        <div class="title-big pb-3 mb-3">
+                            <h3 class="text-warning fw-bold">ABOUT ME</h3>
+                        </div>
+                        <p class="description-p text-warning pe-0 pe-lg-0">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quas optio reiciendis deleniti voluptatem facere sequi, quia, est sed dicta aliquid quidem facilis culpa iure perferendis? Dolor ad quia deserunt.
+                        </p>
+                        <p class="description-p text-warning  pe-0 pe-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quas optio reiciendis deleniti voluptatem facere.</p>
+                        <div style="width:60%;" class="sosmed-horizontal pt-3 pb-3  d-flex justify-content-around">
+                            <a href="#"><i style="width:30px; height:30px;" class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i style="width:30px; height:30px;" class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i style="width:30px; height:30px;" class="fa-brands fa-pinterest"></i></a>
+                             <a href="#"><i style="width:30px; height:30px;" class="fa-brands fa-google"></i></a>
+                             <a href="#"><i style="width:30px; height:30px;" class="fa-brands fa-telegram"></i></a>
+                        </div>
+                        <a href="{{ url_for('edit_page')}}" class="btn rey-btn mt-3 text-danger fw-bold">See More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 mt-5 mt-lg-0 ">
+                <figure class="potoaboutwrap">
+                    <img style="border-radius:10px;" src="https://cdn.lookastic.ru/looks/%D0%BA%D0%BE%D1%80%D0%BE%D1%82%D0%BA%D0%B0%D1%8F-%D0%B4%D1%83%D0%B1%D0%BB%D0%B5%D0%BD%D0%BA%D0%B0-%D1%81%D0%B2%D0%B8%D1%82%D1%88%D0%BE%D1%82-%D0%B7%D0%B0%D1%83%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B4%D0%B6%D0%B8%D0%BD%D1%81%D1%8B-large-76853.jpg"  alt="potoabout" />
+                </figure>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,81 @@
+{% extends 'index.html' %}
+{% block title %}
+Wing the Air
+{% endblock title %}
+
+{% block content %}
+
+<section class="h-100 gradient-form bg-image"
+         style="background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/de653448174627.5890c60973871.jpg'); background-size:cover;">
+    <div class=" py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-8">
+                <div class="card rounded-3 text-light"
+                     style="background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); opacity:0.6;">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="card-body p-md-5 mx-md-4">
+
+                                <div class="text-center">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                                         style="width: 185px;" alt="logo">
+                                    <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                                </div>
+                                {% for category, message in get_flashed_messages(with_categories=true) %}
+                                <span class="{{ category }}">{{ message }}</span>
+                                {% endfor %}
+                                <form method="post" class="form-login">
+                                    {{ form.hidden_tag() }}
+                                    <p>Please login to your account</p>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="email" id="form2Example11" class="form-control"
+                                               placeholder="Phone number or email address"/>
+                                        <label class="form-label" for="form2Example11">{{ form.email.label()
+                                            }}</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="form2Example22" class="form-control"
+                                               placeholder="Your Password"/>
+                                        <label class="form-label" for="form2Example22"> {{ form.password.label()
+                                            }}</label>
+                                    </div>
+
+                                    <div class="text-center pt-1 mb-5 pb-1">
+                                        {{ form.submit(class="btn btn-outline-primary btn-block fa-lg gradient-custom-2 mb-3") }}
+
+                                        <a class="text-light" href="#!">Forgot password?</a>
+                                    </div>
+                                    <div class="form-checkbox">
+                                        <input type="checkbox" id="form2Example2"/>
+                                        <label class="form-label" for="form2Example2"> {{ form.remember.label()
+                                            }}</label>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center pb-4"><p
+                                            class="mb-0 me-2">Don't have an account?</p>
+                                        <a href="{{ url_for('register_page')}}">
+                                            <button onclick="" type="button" class="btn btn-dark">Create new</button>
+                                        </a>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                <h4 class="mb-4">We are more than just a company</h4>
+                                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                    eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

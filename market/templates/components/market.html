@@ -1,0 +1,223 @@
+{% extends 'index.html' %}
+{% block title %}
+Wing the Air
+{% endblock title %}
+{% block content %}
+
+<div class="container">
+<div class="container d-flex justify-content-center tab-content" >
+
+            <div class="items " >
+              <div class="d-flex justify-content-center align-items-center mt-3" style="flex-direction:column;"> <span style="color:#890000;"><h2>Available items on the market</h2> </span><br>
+              <p>Click on one of the items to start buying</p></div>
+              <div class="cl">&nbsp;</div>
+              <ul>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image3.jpg')}}" alt="" /></a> </div>
+                   {% for item in items %}
+                  {% include 'components/item_modals.html' %}
+                    {% endfor %}
+                  <p> Item Number: <span></span><br />
+
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;" >
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image3.jpg')}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image3.jpg')}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image3.jpg')}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{url_for('static', filename='css/images/image4.jpg')}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image4.jpg')}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image4.jpg')}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image4.jpg')}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;" >
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image2.jpg' )}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image2.jpg' )}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image2.jpg')}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image2.jpg')}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image1.jpg' )}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image1.jpg')}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image1.jpg' )}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center" style="flex-direction:column;">
+                  <div class="image"> <a href="#"><img src="{{ url_for('static', filename='css/images/image1.jpg' )}}" alt="" /></a> </div>
+                  <p> Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Wholesale Price: <strong>53 USD</strong></p>
+                   <button class="btn btn-outline-primary pl-3 mb-3" data-toggle="modal" data-target="#Modal-MoreInfo">More Info</button>
+                    <button type="button" class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#Modal-PurchaseConfirm">Purchase</button>
+                    <a href="{{ url_for('owned_page') }}">
+                     <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Selling page</button>
+                    </a>
+                </li>
+              </ul>
+
+              <div class="cl">&nbsp;
+            </div>
+            </div>
+          </div>
+<div class="shell mb-3">
+ {% include 'components/footer.html' %}
+</div>
+</div>
+ {% endblock content %}

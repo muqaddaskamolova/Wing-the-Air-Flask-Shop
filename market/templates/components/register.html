@@ -1,0 +1,96 @@
+{% extends 'base.html'%}
+{% block title %}
+Wing the Air
+{% endblock title %}
+
+{% block content %}
+<section class="text-center vh-70 bg-image "
+  style="background-image: url('https://cdn.wallpapersafari.com/14/9/rCbGHa.jpg'); background-size:cover;">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3 ">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card mt-4 mb-4" style="border-radius: 15px; opacity:0.6;">
+            <div class="card-body p-5 ">
+              <h2 class="text-uppercase text-center text-primary mb-5">Please, Create an account</h2>
+
+              <form method="post" class="form-register">
+                 {{ form.hidden_tag() }}
+                <div class="form-outline mb-4">
+                  <label class="form-label text-primary " >{{ form.username.label() }}</label>
+                  {{ form.username( placeholder = "Username") }}
+                   <span style="color: red">
+                {% for error in form.username.errors %}
+                    {{error}}
+                {% endfor %}
+            </span>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label text-primary " >{{ form.email_address.label() }}</label>
+                     {{ form.email_address( placeholder = "Email Address") }}
+                   <span style="color: red">
+                {% for error in form.email_address.errors %}
+                    {{error}}
+                {% endfor %}
+            </span>
+
+                </div>
+
+                <div class="form-outline mb-4">
+
+                  <label class="form-label text-primary " >{{ form.password.label() }}</label>
+                    {{ form.password( placeholder = "Password") }}
+                </div>
+
+                <div class="form-outline mb-4">
+
+                  <label class="form-label  text-primary 4cdg">{{ form.confirm_password.label() }}</label>
+                     {{ form.confirm_password( placeholder = "Confirm Password") }}
+                </div>
+
+
+
+                <div class="d-flex justify-content-center">
+
+                    {{ form.submit(class="btn btn-dark btn-block btn-lg gradient-custom-4  fw-bold text-light")}}
+
+                </div>
+{% if form.submit.errors %}
+              {% for error in form.submit.errors %}
+                <div class="alert alert-danger" role="alert">
+                  {{ error }}
+                </div>
+              {% endfor %}
+            {% endif %}
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="{{ url_for('login') }}"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+ {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <br/>
+               {% for category, message in messages %}
+                <div class="alert alert-{{category}}">
+        <ul>
+
+                <li>{{message}}</li>
+
+        </ul>
+                    <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times</span>
+                    </button>
+             </div>
+                 {% endfor %}
+        {% endif %}
+    {% endwith %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock content %}
